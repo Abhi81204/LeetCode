@@ -1,5 +1,6 @@
 ##  LeetCode Java Solutions
 Welcome to my GitHub repository containing solutions to various LeetCode problems, all implemented in Java.
+
 These solutions are snippets that have passed all test cases on the LeetCode online judge. However, please note that these snippets won't execute directly in your local IDE or compiler. You would need to write a main() function and invoke the solution's function with appropriate inputs or test cases to run them standalone.
 
 ## Notes:
@@ -7,7 +8,9 @@ The code in this repository is original content written by me. If you find it he
 
 ## How to Contribute?
 Fork the repository.
+
 Make desired changes (add/delete/modify).
+
 Submit a pull request.
 
 ## When to Contribute?
