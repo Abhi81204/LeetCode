@@ -17,10 +17,15 @@ Submit a pull request.
 You should consider contributing if:
 
 Your solution's time complexity is better than the existing solution.
+
 Your solution's space complexity is better than the existing solution.
+
 Your solution is of the same time and space complexity but more concise. In this case, comment out the original solution and make a pull request with your solution.
+
 Your solution is of the same time and space complexity but easier/more readable to understand.
+
 You use the same solution as present in the main branch but have added short comments explaining the rationale at particular code lines, where necessary.
+
 Let's collaborate and enhance our problem-solving skills together!
 
 ## Contact
