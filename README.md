@@ -32,7 +32,7 @@ Let's collaborate and enhance our problem-solving skills together!
 
 - **Name:** Rayidi Abhiram
 - **Email:** abhiramrayidi03@gmail.com
-- **LinkedIn:** [Your LinkedIn Profile](https://www.linkedin.com/in/abhiram-rayidi-b8185a258/)
+- **LinkedIn:** [My LinkedIn](https://www.linkedin.com/in/abhiram-rayidi-b8185a258/)
 
 ## About Me
 
