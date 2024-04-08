@@ -1,5 +1,6 @@
 class Solution {
     public String getSmallestString(String s, int k) {
+        if(k==0) return s;
         char[] t = s.toCharArray();
         for (int i = 0; i < t.length; i++) {
             int currentDist = distToA(t[i]);
