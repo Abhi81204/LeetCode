@@ -4,7 +4,7 @@ class Solution {
         int f = 0; // filled spaces
         int n = deck.length;
         int res[] = new int [n];
-        int i = 0;
+        int i = 0; // res index
         Arrays.sort(deck);
         while(f<n){
             if(res[i]==0) {
