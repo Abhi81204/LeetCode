@@ -7,11 +7,13 @@ class Solution {
         int i = 0;
         Arrays.sort(deck);
         while(f<n){
-            if(!s && res[i]==0) {
-                res[i] = deck[f];
+            if(res[i]==0) {
+                if(!s) {
+                    res[i] = deck[f];
+                    f++;  
+                }
                 s = !s;
-                f++;      
-            } else if(res[i]==0) s = !s;
+            } 
             i = (i+1)%n;
         }
         return res;
