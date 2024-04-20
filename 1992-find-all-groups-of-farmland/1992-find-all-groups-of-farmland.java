@@ -1,51 +1,24 @@
 class Solution {
     public int[][] findFarmland(int[][] land) {
-        int rows = land.length;
-        int cols = land[0].length;
-        Set<String> visited = new HashSet<>();
-        List<int[]> result = new ArrayList<>();
+        int N = land.length, M = land[0].length;
+        List<int[]> ans = new ArrayList<>();
 
-        for (int i = 0; i < rows; i++) {
-            for (int j = 0; j < cols; j++) {
-                if (land[i][j] == 1 && !visited.contains(i + "," + j)) {
-                    int[] bounds = dfs(land, visited, i, j);
-                    result.add(bounds);
+        for (int row1 = 0; row1 < N; row1++) {
+            for (int col1 = 0; col1 < M; col1++) {
+                if (land[row1][col1] == 1) {
+                    int x = row1, y = col1;
+
+                    for (x = row1; x < N && land[x][col1] == 1; x++) {
+                        for (y = col1; y < M && land[x][y] == 1; y++) {
+                            land[x][y] = 0;
+                        }
+                    }
+
+                    int[] arr = new int[] {row1, col1, x - 1, y - 1};
+                    ans.add(arr);
                 }
             }
         }
-
-        return result.toArray(new int[result.size()][]);
-    }
-
-    private int[] dfs(int[][] land, Set<String> visited, int x, int y) {
-        Stack<int[]> stack = new Stack<>();
-        stack.push(new int[]{x, y});
-        visited.add(x + "," + y);
-
-        int minRow = x, minCol = y;
-        int maxRow = x, maxCol = y;
-
-        while (!stack.isEmpty()) {
-            int[] current = stack.pop();
-            int curX = current[0], curY = current[1];
-
-            int[][] directions = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
-            for (int[] dir : directions) {
-                int nx = curX + dir[0];
-                int ny = curY + dir[1];
-
-                if (nx >= 0 && nx < land.length && ny >= 0 && ny < land[0].length &&
-                    land[nx][ny] == 1 && !visited.contains(nx + "," + ny)) {
-                    visited.add(nx + "," + ny);
-                    stack.push(new int[]{nx, ny});
-                    minRow = Math.min(minRow, nx);
-                    minCol = Math.min(minCol, ny);
-                    maxRow = Math.max(maxRow, nx);
-                    maxCol = Math.max(maxCol, ny);
-                }
-            }
-        }
-
-        return new int[]{minRow, minCol, maxRow, maxCol};
+        return ans.stream().toArray(int[][] :: new);
     }
 }
